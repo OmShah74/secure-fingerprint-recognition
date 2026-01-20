@@ -145,7 +145,7 @@ def compare_feature_extraction(img, orientation_map):
     
     # Current method
     start_time = time.time()
-    current_minutiae = extract_minutiae(img, orientation_map)
+    current_minutiae = extract_minutiae(img, orientation_map, use_ransac=False, visualize=False)
     current_time = time.time() - start_time
     
     # RANSAC method
